@@ -12,8 +12,22 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Hello, World!")
-                .padding()
+            HStack(alignment: .center, spacing: 6) {
+                TextField("Add New Note", text: $text)
+                
+                Button {
+                    // ACTION
+                } label: {
+                    Image(systemName: "plus.circle")
+                        .font(.system(size: 42, weight: .semibold))
+                }
+                .fixedSize()
+                .buttonStyle(PlainButtonStyle())
+                .foregroundColor(.accentColor)
+                // .buttonStyle(BorderedButtonStyle(tint: .accentColor))
+            } //: HSTACK
+            
+            Spacer()
         } //: VSTACK
         .navigationTitle("Notes")
     }
