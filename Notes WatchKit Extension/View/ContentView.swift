@@ -11,8 +11,11 @@ struct ContentView: View {
     // MARK: - BODY
     
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        VStack {
+            Text("Hello, World!")
+                .padding()
+        } //: VSTACK
+        .navigationTitle("Notes")
     }
 }
 
@@ -21,5 +24,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("Apple Watch Series 7 - 45mm")
     }
 }
