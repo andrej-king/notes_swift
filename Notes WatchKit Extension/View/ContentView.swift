@@ -88,7 +88,7 @@ struct ContentView: View {
             Text("\(notes.count)")
         } //: VSTACK
         .navigationTitle("Notes")
-        .onAppear(perform: {
+        .onAppear(perform: { // action when view is visible
             load()
         })
         
