@@ -27,11 +27,16 @@ struct SettingsView: View {
             // SLIDER
             Slider(value: Binding(get: { // custom binding by change slider value
                 self.value
-            }, set: {(newValue) in
-                self.value = newValue
-                self.update()
-            }), in: 1...4, step: 1)
+            }, set: {newValue in
+                if newValue > 0 {
+                    self.value = newValue
+                    self.lineCount = Int(value)
+                }
+            }), in: 0...4, step: 1)
                 .accentColor(.accentColor)
+                .onAppear(perform: {
+                    value = Float(lineCount)
+                })
         } //: VSTACK
     }
 }

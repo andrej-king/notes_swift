@@ -38,6 +38,13 @@ struct DetailView: View {
                     }
                     .sheet(isPresented: $isSettingsPresented, content: {
                         SettingsView()
+                            .toolbar() {
+                                ToolbarItem(placement: .cancellationAction) {
+                                    Button("Close") {
+                                        self.isSettingsPresented = false
+                                    }
+                                }
+                            }
                     })
                 
                 Spacer()
