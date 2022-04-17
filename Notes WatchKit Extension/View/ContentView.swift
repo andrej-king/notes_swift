@@ -93,20 +93,31 @@ struct ContentView: View {
             
             Spacer()
             
-            List {
-                ForEach(0..<notes.count, id: \.self) { i in
-                    HStack {
-                        Capsule()
-                            .frame(width: 4)
-                            .foregroundColor(.accentColor)
-                        
-                        Text(notes[i].text)
-                            .lineLimit(1)
-                            .padding(.leading, 5)
-                    } //: HSTACK
-                } //: LOOP
-                .onDelete(perform: delete)
-            } //: LIST
+            if notes.count >= 1 {
+                List {
+                    ForEach(0..<notes.count, id: \.self) { i in
+                        HStack {
+                            Capsule()
+                                .frame(width: 4)
+                                .foregroundColor(.accentColor)
+                            
+                            Text(notes[i].text)
+                                .lineLimit(1)
+                                .padding(.leading, 5)
+                        } //: HSTACK
+                    } //: LOOP
+                    .onDelete(perform: delete)
+                } //: LIST
+            } else {
+                Spacer()
+                Image(systemName: "note.text")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.gray)
+                    .opacity(0.25)
+                    .padding(20)
+                Spacer()
+            }
         } //: VSTACK
         .navigationTitle("Notes")
         .onAppear(perform: { // action when view is visible
