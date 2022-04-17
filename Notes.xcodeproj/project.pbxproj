@@ -11,6 +11,7 @@
 		55AF9482280C77F900F182B8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF9481280C77F900F182B8 /* DetailView.swift */; };
 		55AF9484280C7CC800F182B8 /* CreaditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF9483280C7CC800F182B8 /* CreaditsView.swift */; };
 		55AF9487280C7D7900F182B8 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF9486280C7D7900F182B8 /* HeaderView.swift */; };
+		55AF948B280C9A6A00F182B8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF948A280C9A6A00F182B8 /* SettingsView.swift */; };
 		55E993A92802273D002E365A /* Notes WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 55E993A82802273D002E365A /* Notes WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		55E993AE2802273E002E365A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E993AD2802273E002E365A /* Assets.xcassets */; };
 		55E993B42802273E002E365A /* Notes WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55E993B32802273E002E365A /* Notes WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -68,6 +69,7 @@
 		55AF9481280C77F900F182B8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		55AF9483280C7CC800F182B8 /* CreaditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreaditsView.swift; sourceTree = "<group>"; };
 		55AF9486280C7D7900F182B8 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		55AF948A280C9A6A00F182B8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		55E993A42802273D002E365A /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E993A82802273D002E365A /* Notes WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notes WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E993AD2802273E002E365A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				55E993B82802273E002E365A /* ContentView.swift */,
 				55AF9481280C77F900F182B8 /* DetailView.swift */,
 				55AF9483280C7CC800F182B8 /* CreaditsView.swift */,
+				55AF948A280C9A6A00F182B8 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55E993B92802273E002E365A /* ContentView.swift in Sources */,
+				55AF948B280C9A6A00F182B8 /* SettingsView.swift in Sources */,
 				55E993BB2802273E002E365A /* NotesApp.swift in Sources */,
 				55E993BD2802273E002E365A /* ComplicationController.swift in Sources */,
 				55AF9484280C7CC800F182B8 /* CreaditsView.swift in Sources */,
