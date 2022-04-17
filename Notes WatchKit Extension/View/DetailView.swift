@@ -7,6 +7,8 @@ struct DetailView: View {
     let count: Int
     let index: Int
     
+    @State private var isCreaditsPresented: Bool = false
+    
     // MARK: - BODY
     
     var body: some View {
@@ -39,6 +41,12 @@ struct DetailView: View {
                 
                 Image(systemName: "info.circle")
                     .imageScale(.large)
+                    .onTapGesture {
+                        isCreaditsPresented.toggle()
+                    }
+                    .sheet(isPresented: $isCreaditsPresented, content: { // show credits view
+                        CreaditsView()
+                    })
                 
             } //: HSTACK
             .foregroundColor(.secondary)
