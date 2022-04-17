@@ -49,6 +49,14 @@ struct ContentView: View {
         }
     }
     
+    // delete note
+    func delete(offset: IndexSet) {
+        withAnimation {
+            notes.remove(atOffsets: offset)
+            save()
+        }
+    }
+    
     
     // MARK: - BODY
     
@@ -96,7 +104,8 @@ struct ContentView: View {
                             .lineLimit(1)
                             .padding(.leading, 5)
                     } //: HSTACK
-                }
+                } //: LOOP
+                .onDelete(perform: delete)
             } //: LIST
         } //: VSTACK
         .navigationTitle("Notes")
